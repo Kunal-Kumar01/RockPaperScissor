@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getCompChoice(){
+            choice = ["Rock","Paper","Scissor"]
+            return choice[Math.round(Math.random()*2)];
+        }
+
+        function round(player, computer){
+            if((player==="Scissor" && computer==="Rock") || (player==="Paper" && computer==="Scissor") || (player==="Rock" && computer==="Paper")){
+                return "You lose! Computer beats Player"
+            }
+            else if((computer==="Scissor" && player==="Rock") || (computer==="Paper" && player==="Scissor") || (computer==="Rock" && player==="Paper")){
+                return "You win! Player beats Computer"
+            }
+            else{
+                return "Draw"
+            }
+
+        }
+
+        playerSelect = "Paper"
+        computer = getCompChoice()
+        console.log(computer)
+        console.log(round(playerSelect,computer)) 
+
+        // for(i = 0; i<10; i++){
+        //     console.log(getCompChoice());
+        // }
+    </script>
+</body>
+</html>
