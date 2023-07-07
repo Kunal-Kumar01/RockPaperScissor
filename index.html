@@ -26,11 +26,24 @@
 
         }
 
-        playerSelect = "Paper"
-        computer = getCompChoice()
-        console.log(computer)
-        console.log(round(playerSelect,computer)) 
+        function game(){
+            i=0;
+            console.log("Let's start!")
+            while(i<5){
+                console.log("Round "+(i+1))
+                user = prompt("Player Enter you choice: ")
+                computer=getCompChoice()
+                console.log("Computer has choosen: "+ computer)
+                console.log(round(user,computer))
+                i++
+            }
+        }
 
+        // playerSelect = "Paper"
+        // computer = getCompChoice()
+        // console.log(computer)
+        // console.log(round(playerSelect,computer)) 
+        game()
         // for(i = 0; i<10; i++){
         //     console.log(getCompChoice());
         // }
