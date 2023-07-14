@@ -4,49 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RockPaperScissorGame</title>
+    <script src="code.js" defer> </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        function getCompChoice(){
-            choice = ["Rock","Paper","Scissor"]
-            return choice[Math.round(Math.random()*2)];
-        }
+    <div class="header">
+        <p class="heading">Rock Paper Scissor Game</p>
+    </div>
+    <div class="gameWindow">
+        <p class="div1">Human vs Computer</p>
+        <p class="div2">Win five games to be the WINNER</p>
+        <div class="div3">
+            <div class="user">
+                <p class="userName">User Score</p>
+                <div class="userScore"></div>
+            </div>
+            <div class="comp">
+                <p class="compName">Computer Score</p>
+                <div class="compScore"></div>
+            </div>
+        </div>
+        <div class="div6">
+            Choose your Symbol
+        </div>
+        <div class="div5">
+            <button class="rock">
+                <div class="symbol">✊</div>
+            </button>
+            <button class="paper">
+                <div class="symbol">✋</div>
+            </button>
+            <button class="scissor">
+                <div class="symbol">✌</div>
+            </button>
+        </div>
+        <div class="div4">
+            <p class="resultHead">
+                Results
+            </p>
+            <div class="result">
+            </div>
 
-        function round(player, computer){
-            if((player==="Scissor" && computer==="Rock") || (player==="Paper" && computer==="Scissor") || (player==="Rock" && computer==="Paper")){
-                return "You lose! Computer beats Player"
-            }
-            else if((computer==="Scissor" && player==="Rock") || (computer==="Paper" && player==="Scissor") || (computer==="Rock" && player==="Paper")){
-                return "You win! Player beats Computer"
-            }
-            else{
-                return "Draw"
-            }
-
-        }
-
-        function game(){
-            i=0;
-            console.log("Let's start!")
-            while(i<5){
-                console.log("Round "+(i+1))
-                user = prompt("Player Enter you choice: ")
-                computer=getCompChoice()
-                console.log("Computer has choosen: "+ computer)
-                console.log(round(user,computer))
-                i++
-            }
-        }
-
-        // playerSelect = "Paper"
-        // computer = getCompChoice()
-        // console.log(computer)
-        // console.log(round(playerSelect,computer)) 
-        game()
-        // for(i = 0; i<10; i++){
-        //     console.log(getCompChoice());
-        // }
-    </script>
+        </div>
+        <div class="div7">
+            <button class="reset">Play Again!</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="text">Made by<a class="link" href="https://github.com/Kunal-Kumar01" target="_blank"> Kunal-Kumar01</a></p>
+    </div>
 </body>
 </html>
